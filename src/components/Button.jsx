@@ -11,6 +11,8 @@ const VARIANT_STYLES = {
     'bg-transparent text-[#141D38] border border-[#CEBBE9] hover:bg-[#F8F5FD] hover:border-[#664999] hover:text-[#51377E]',
   ghost:
     'bg-transparent text-[#434C66] border border-transparent hover:bg-[#F8F5FD] hover:text-[#141D38]',
+  light:
+    'bg-white text-[#141D38] border border-transparent hover:bg-[#F1EBF9] active:bg-[#E3D7F4] shadow-[0_12px_28px_-12px_rgba(0,0,0,0.35)]',
 };
 
 const SIZE_STYLES = {
