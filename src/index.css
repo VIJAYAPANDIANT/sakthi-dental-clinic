@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+/*
+ * Sakthi Dental Clinic — Global Design System
+ * Primary palette: Lavender, crisp white, and soft pastel shades
+ * Secondary palette: Deep navy ink and subtle blue/blush accents
+ */
+@theme {
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Primary Lavender Scale */
+  --color-lavender-50: #F8F5FD;
+  --color-lavender-100: #F1EBF9;
+  --color-lavender-200: #E3D7F4;
+  --color-lavender-300: #CEBBE9;
+  --color-lavender-500: #7E62B0;
+  --color-lavender-600: #664999;
+  --color-lavender-700: #51377E;
+
+  /* Secondary Navy & Neutral Surfaces */
+  --color-navy-950: #0E152B;
+  --color-navy-900: #141D38;
+  --color-navy-800: #1F2B4D;
+  --color-slate-body: #434C66;
+  --color-slate-muted: #66708A;
+
+  /* Subtle Pastel Accents (Blue & Pink) */
+  --color-sky-soft: #EEF5FC;
+  --color-sky-accent: #2C5F9E;
+  --color-blush-soft: #FDF2F6;
+  --color-blush-border: #F2D7E2;
+  --color-blush-accent: #A94B6E;
+
+  /* Radius Scale */
+  --radius-card: 1.25rem;
+  --radius-button: 0.75rem;
+  --radius-panel: 1.5rem;
+
+  /* Elevation Shadows */
+  --shadow-soft: 0 10px 30px -12px rgba(20, 29, 56, 0.08);
+  --shadow-elevated: 0 18px 44px -18px rgba(20, 29, 56, 0.14);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-navy-900);
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-navy-900);
+    text-wrap: balance;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-lavender-600);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Reusable Layout & Surface Utilities */
+@layer components {
+  .clinic-container {
+    width: 100%;
+    max-width: 78rem; /* 1248px — ideal desktop frame for 1440px viewports */
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .clinic-container {
+      padding-inline: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .clinic-container {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  .clinic-section {
+    padding-block: 4rem;
+  }
+
+  @media (min-width: 1024px) {
+    .clinic-section {
+      padding-block: 5.5rem;
+    }
+  }
+
+  .clinic-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-lavender-200);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+  }
+}

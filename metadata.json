@@ -1,0 +1,8 @@
+{
+  "name": "Sakthi Dental Clinic — Hosur, Tamil Nadu",
+  "description": "Specialized Dental Care for Women, Children & Families in Hosur, Tamil Nadu. Compassionate, expert-led dental services in a modern and welcoming environment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
