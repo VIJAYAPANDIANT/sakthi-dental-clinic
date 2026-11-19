@@ -9,11 +9,11 @@ import CTA from '../sections/CTA';
 export default function Home() {
   return (
     <>
-      {/* Day 1 Deliverables */}
+      {/* Homepage Foundation: Hero & Welcome Assurance Banner */}
       <Hero />
       <WelcomeBanner />
 
-      {/* Day 2 Modular Sections (scaffolded, populated with client content next) */}
+      {/* Day 3 Modular Sections (scaffolded and ready for upcoming client content) */}
       <WhyChooseUs />
       <Services />
       <Testimonials />

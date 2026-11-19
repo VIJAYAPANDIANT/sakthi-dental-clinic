@@ -70,8 +70,18 @@ export default function Navbar() {
       }
     };
 
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setMobileMenuOpen(false);
+      }
+    };
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('resize', handleResize);
+    };
   }, [mobileMenuOpen]);
 
   return (
@@ -83,7 +93,7 @@ export default function Navbar() {
       }`}
     >
       <div className="clinic-container">
-        <div className="flex items-center justify-between gap-8 h-[72px]">
+        <div className="flex items-center justify-between gap-6 lg:gap-8 h-[72px]">
           {/* Zone 1: Brand wordmark (single line) */}
           <Link
             to="/"
@@ -92,7 +102,7 @@ export default function Navbar() {
           >
             <ClinicEmblem />
             <span
-              className="text-[19px] font-semibold tracking-[-0.015em] text-[#141D38] group-hover:text-[#664999] transition-colors duration-150"
+              className="text-[18px] sm:text-[19px] font-semibold tracking-[-0.015em] text-[#141D38] group-hover:text-[#664999] transition-colors duration-150"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Sakthi Dental Clinic
@@ -110,7 +120,7 @@ export default function Navbar() {
                 to={item.to}
                 end={item.to === '/'}
                 className={({ isActive }) =>
-                  `relative py-1.5 text-[14px] font-medium whitespace-nowrap shrink-0 transition-colors duration-150 ${
+                  `group relative py-1.5 text-[14px] font-medium whitespace-nowrap shrink-0 transition-colors duration-150 ${
                     isActive
                       ? 'text-[#51377E] font-semibold'
                       : 'text-[#434C66] hover:text-[#141D38]'
@@ -122,10 +132,10 @@ export default function Navbar() {
                     <span>{item.label}</span>
                     <span
                       aria-hidden="true"
-                      className={`absolute inset-x-0 -bottom-0.5 h-[2px] rounded-full transition-transform duration-150 origin-left ${
+                      className={`absolute inset-x-0 -bottom-0.5 h-[2px] rounded-full transition-transform duration-150 ease-out origin-left ${
                         isActive
                           ? 'bg-[#664999] scale-x-100'
-                          : 'bg-[#CEBBE9] scale-x-0'
+                          : 'bg-[#CEBBE9] scale-x-0 group-hover:scale-x-100'
                       }`}
                     />
                   </>
@@ -134,13 +144,13 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Zone 3: Single Primary Action & Mobile Toggle */}
+          {/* Zone 3: Single Primary Action & Responsive Menu Toggle */}
           <div className="flex items-center gap-3 shrink-0">
             <Button
               to="/contact?intent=appointment"
               variant="primary"
               size="sm"
-              className="hidden lg:inline-flex"
+              className="hidden sm:inline-flex"
             >
               <CalendarCheck className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span>Fix an Appointment</span>

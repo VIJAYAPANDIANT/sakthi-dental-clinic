@@ -19,9 +19,9 @@ export default function FAQs() {
             Frequently Asked Questions
           </h1>
           <p className="mt-5 text-[16px] leading-[1.7] text-[#434C66]">
-            Clear, patient-friendly answers regarding appointments, preventive
-            care, and family visits at Sakthi Dental Clinic will be published in
-            Day 2.
+            Have questions about visiting Sakthi Dental Clinic in Hosur, Tamil
+            Nadu? You are always in safe hands—reach out to our care team
+            anytime for guidance before your visit.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3.5">

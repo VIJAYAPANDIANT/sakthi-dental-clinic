@@ -19,9 +19,9 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="mt-5 text-[16px] leading-[1.7] text-[#434C66]">
-            Sakthi Dental Clinic, Hosur, Tamil Nadu respects patient privacy and
-            confidentiality. The complete clinic privacy policy document will be
-            finalized during Day 2 development.
+            Sakthi Dental Clinic, Hosur, Tamil Nadu is committed to protecting
+            patient privacy, personal health records, and consultation details
+            with care and confidentiality.
           </p>
 
           <div className="mt-8">

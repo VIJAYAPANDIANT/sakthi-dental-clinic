@@ -20,9 +20,8 @@ export default function About() {
           </h1>
           <p className="mt-5 text-[16px] leading-[1.7] text-[#434C66]">
             Sakthi Dental Clinic in Hosur, Tamil Nadu is dedicated to providing
-            specialized, expert-led dental services in a modern and welcoming
-            environment. Detailed clinic history and verified clinical team
-            profiles will be integrated in Day 2 using client-provided details.
+            compassionate, expert-led dental services tailored to women,
+            children, and families in a modern and welcoming environment.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3.5">

@@ -19,9 +19,9 @@ export default function Treatments() {
             Specialized Dental Treatments
           </h1>
           <p className="mt-5 text-[16px] leading-[1.7] text-[#434C66]">
-            Tailored dental services for women, children, and families in Hosur,
-            Tamil Nadu. Complete treatment categories and procedure guides will
-            be added in Day 2 using the official clinic service list.
+            Experience compassionate, expert-led dental services tailored to
+            women, children, and families at Sakthi Dental Clinic in Hosur,
+            Tamil Nadu. Reach out to schedule a personalized consultation.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3.5">

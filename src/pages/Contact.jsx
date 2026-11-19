@@ -157,8 +157,8 @@ export default function Contact() {
                   <span className="font-medium text-[#141D38]">
                     {isEmergency ? 'Emergency Dental Support' : formData.patientGroup}
                   </span>{' '}
-                  has been recorded. Full clinic contact channels and scheduling
-                  details will be connected in the upcoming contact module.
+                  has been recorded. You are always in safe hands, and we are
+                  ready to help you at Sakthi Dental Clinic, Hosur.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Button

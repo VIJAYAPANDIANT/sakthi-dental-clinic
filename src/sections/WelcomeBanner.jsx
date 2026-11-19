@@ -1,51 +1,63 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, ShieldCheck } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, HeartHandshake, ShieldCheck } from 'lucide-react';
+import Button from '../components/Button';
 
 export default function WelcomeBanner() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
     <section
-      aria-label="Patient Assurance"
-      className="py-10 sm:py-12 lg:py-14 bg-white"
+      aria-labelledby="welcome-assurance-heading"
+      className="py-10 sm:py-12 lg:py-16 bg-white"
     >
       <div className="clinic-container">
         <motion.div
           initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="relative overflow-hidden rounded-[24px] bg-[#141D38] text-white px-6 py-8 sm:px-10 sm:py-10 lg:px-14 lg:py-11 shadow-[0_20px_44px_-22px_rgba(20,29,56,0.4)]"
+          className="clinic-banner-pastel relative overflow-hidden px-6 py-8 sm:px-10 sm:py-10 lg:px-14 lg:py-12"
         >
-          {/* Subtle decorative lavender & sky radial sheen */}
+          {/* Subtle pastel radial accents (blush & sky) */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#7E62B0]/30 blur-3xl"
+            className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-[#F9DFE9]/65 blur-3xl"
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -left-16 -bottom-24 h-56 w-56 rounded-full bg-[#2C5F9E]/25 blur-3xl"
+            className="pointer-events-none absolute -left-16 -bottom-20 h-56 w-56 rounded-full bg-[#DCEBF9]/70 blur-3xl"
           />
 
-          <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
-            <div className="flex items-start sm:items-center gap-4 sm:gap-5">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center shrink-0">
+          <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-7 lg:gap-10">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+              {/* Soft dual healthcare emblem */}
+              <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-[#E3D7F4] shadow-[0_8px_20px_-10px_rgba(102,73,153,0.25)] flex items-center justify-center shrink-0">
                 <ShieldCheck
-                  className="w-6 h-6 sm:w-7 sm:h-7 text-[#E3D7F4]"
+                  className="w-7 h-7 sm:w-8 sm:h-8 text-[#664999]"
                   aria-hidden="true"
                 />
+                <span
+                  aria-hidden="true"
+                  className="absolute -bottom-1.5 -right-1.5 w-6 h-6 rounded-lg bg-[#FDF2F6] border border-[#F2D7E2] flex items-center justify-center"
+                >
+                  <HeartHandshake className="w-3.5 h-3.5 text-[#A94B6E]" />
+                </span>
               </div>
 
               <div>
-                <p className="text-[13px] font-medium tracking-[0.01em] text-[#D8C9EE]">
-                  Our Promise to Every Patient
+                <p className="text-[13px] font-medium tracking-[0.01em] text-[#664999]">
+                  <span>Patient Care Assurance</span>
+                  <span aria-hidden="true" className="mx-2 text-[#B6A1D8]">
+                    ·
+                  </span>
+                  <span className="text-[#434C66]">Sakthi Dental Clinic</span>
                 </p>
                 <h2
-                  className="mt-1 text-white font-medium tracking-[-0.015em] leading-[1.28]"
+                  id="welcome-assurance-heading"
+                  className="mt-1.5 text-[#141D38] font-semibold tracking-[-0.018em] leading-[1.26] max-w-[34ch]"
                   style={{
                     fontFamily: 'var(--font-display)',
-                    fontSize: 'clamp(1.375rem, 2.3vw, 2rem)',
+                    fontSize: 'clamp(1.375rem, 2.35vw, 2rem)',
                   }}
                 >
                   You are always in safe hands. We are ready to help, anytime.
@@ -53,14 +65,15 @@ export default function WelcomeBanner() {
               </div>
             </div>
 
-            <div className="shrink-0">
-              <Link
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <Button
                 to="/contact?intent=appointment"
-                className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-[#141D38] hover:bg-[#F1EBF9] transition-colors duration-150 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                variant="secondary"
+                size="md"
               >
-                <span>Reach Our Clinic</span>
+                <span>Fix an Appointment</span>
                 <ArrowRight className="w-4 h-4 shrink-0" aria-hidden="true" />
-              </Link>
+              </Button>
             </div>
           </div>
         </motion.div>

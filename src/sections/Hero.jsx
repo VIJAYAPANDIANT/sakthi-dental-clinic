@@ -101,42 +101,55 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: Editorial Clinic Photograph */}
+          {/* Right Column: Editorial Clinic Photograph with Subtle Decorative Framing */}
           <motion.div
             {...imageMotion}
             className="lg:col-span-6 flex items-stretch"
           >
-            <div className="relative w-full overflow-hidden rounded-[24px] bg-[#EFE8FA] border border-[#E3D7F4] shadow-[0_22px_50px_-24px_rgba(20,29,56,0.2)] aspect-[4/3] lg:aspect-auto lg:min-h-[440px]">
-              {!imageError ? (
-                <img
-                  src={HERO_IMAGE_SRC}
-                  alt="A dentist speaking warmly with a mother and her young daughter inside the bright, calming consultation room at Sakthi Dental Clinic"
-                  referrerPolicy="no-referrer"
-                  loading="eager"
-                  decoding="async"
-                  onError={() => setImageError(true)}
-                  className="w-full h-full object-cover object-center"
-                />
-              ) : (
-                <div className="w-full h-full flex flex-col items-center justify-center p-10 text-center bg-gradient-to-br from-[#F1EBF9] via-[#FDF4F7] to-[#EEF5FC]">
-                  <div className="w-16 h-16 rounded-2xl bg-white/90 border border-[#E3D7F4] flex items-center justify-center mb-4">
-                    <HeartHandshake
-                      className="w-8 h-8 text-[#664999]"
-                      aria-hidden="true"
-                    />
+            <div className="relative w-full flex items-stretch">
+              {/* Subtle pastel decorative offset accents */}
+              <div
+                aria-hidden="true"
+                className="hidden sm:block pointer-events-none absolute -top-3.5 -right-3.5 w-32 h-32 rounded-[26px] border border-[#E3D7F4] bg-[#FDF2F6]/65"
+              />
+              <div
+                aria-hidden="true"
+                className="hidden sm:block pointer-events-none absolute -bottom-3.5 -left-3.5 w-28 h-28 rounded-[24px] border border-[#DCE8F8] bg-[#EEF5FC]/75"
+              />
+
+              <div className="relative z-10 w-full overflow-hidden rounded-[24px] bg-[#EFE8FA] border border-[#E3D7F4] shadow-[0_22px_50px_-24px_rgba(20,29,56,0.2)] aspect-[4/3] lg:aspect-auto lg:min-h-[450px]">
+                {!imageError ? (
+                  <img
+                    src={HERO_IMAGE_SRC}
+                    alt="A dentist speaking warmly with a mother and her young daughter inside the bright, calming consultation room at Sakthi Dental Clinic"
+                    referrerPolicy="no-referrer"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    onError={() => setImageError(true)}
+                    className="w-full h-full object-cover object-center"
+                  />
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center p-10 text-center bg-gradient-to-br from-[#F1EBF9] via-[#FDF4F7] to-[#EEF5FC]">
+                    <div className="w-16 h-16 rounded-2xl bg-white/90 border border-[#E3D7F4] flex items-center justify-center mb-4">
+                      <HeartHandshake
+                        className="w-8 h-8 text-[#664999]"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <p
+                      className="text-lg font-semibold text-[#141D38]"
+                      style={{ fontFamily: 'var(--font-display)' }}
+                    >
+                      Sakthi Dental Clinic
+                    </p>
+                    <p className="mt-1 text-sm text-[#434C66] max-w-xs">
+                      Compassionate dental care for women, children, and families
+                      in Hosur, Tamil Nadu.
+                    </p>
                   </div>
-                  <p
-                    className="text-lg font-semibold text-[#141D38]"
-                    style={{ fontFamily: 'var(--font-display)' }}
-                  >
-                    Sakthi Dental Clinic
-                  </p>
-                  <p className="mt-1 text-sm text-[#434C66] max-w-xs">
-                    Compassionate dental care for women, children, and families
-                    in Hosur, Tamil Nadu.
-                  </p>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </motion.div>
         </div>
