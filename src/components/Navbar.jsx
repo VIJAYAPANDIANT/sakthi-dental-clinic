@@ -112,7 +112,7 @@ export default function Navbar() {
           {/* Zone 2: Desktop navigation links */}
           <nav
             aria-label="Primary Navigation"
-            className="hidden lg:flex items-center gap-7"
+            className="hidden lg:flex items-center gap-5 xl:gap-7"
           >
             {NAV_LINKS.map((item) => (
               <NavLink
@@ -192,6 +192,7 @@ export default function Navbar() {
                   key={item.to}
                   to={item.to}
                   end={item.to === '/'}
+                  onClick={() => setMobileMenuOpen(false)}
                   className={({ isActive }) =>
                     `flex items-center justify-between px-4 py-3 rounded-xl text-[15px] font-medium transition-colors duration-150 ${
                       isActive
@@ -210,6 +211,7 @@ export default function Navbar() {
                   variant="primary"
                   size="md"
                   className="w-full"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   <CalendarCheck className="w-4 h-4 shrink-0" aria-hidden="true" />
                   <span>Fix an Appointment</span>

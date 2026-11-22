@@ -10,11 +10,23 @@ import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
-function ScrollToTop() {
+const ROUTE_TITLES = {
+  '/': 'Sakthi Dental Clinic | Specialized Dental Care in Hosur, Tamil Nadu',
+  '/about': 'About Us | Sakthi Dental Clinic, Hosur',
+  '/treatments': 'Our Dental Treatments | Sakthi Dental Clinic, Hosur',
+  '/faqs': 'Frequently Asked Questions | Sakthi Dental Clinic, Hosur',
+  '/contact': 'Contact Us | Sakthi Dental Clinic, Hosur',
+  '/privacy-policy': 'Privacy Policy | Sakthi Dental Clinic, Hosur',
+};
+
+function RouteEffects() {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.title =
+      ROUTE_TITLES[pathname] ||
+      'Sakthi Dental Clinic | Specialized Dental Care in Hosur, Tamil Nadu';
   }, [pathname]);
 
   return null;
@@ -23,8 +35,8 @@ function ScrollToTop() {
 export default function App() {
   return (
     <MotionConfig reducedMotion="user">
-      <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-white text-[#141D38]">
+      <RouteEffects />
+      <div className="min-h-screen flex flex-col bg-white text-[#141D38] overflow-x-clip">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus:bg-[#141D38] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"

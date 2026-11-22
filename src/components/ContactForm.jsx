@@ -248,7 +248,7 @@ export default function ContactForm({ intent = 'appointment' }) {
               </div>
               <div className="sm:col-span-2">
                 <dt className="text-xs font-medium text-[#66708A]">Email Address</dt>
-                <dd className="mt-0.5 font-semibold text-[#141D38]">
+                <dd className="mt-0.5 font-semibold text-[#141D38] break-all">
                   {submissionResult.payload.email}
                 </dd>
               </div>
