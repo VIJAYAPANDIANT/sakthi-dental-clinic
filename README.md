@@ -1,11 +1,14 @@
 # 🦷 Sakthi Dental Clinic — Web Application
 
+[![Live Website](https://img.shields.io/badge/Live_Website-sakthi--dental--clinic-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://sakthi-dental-clinic-dusky.vercel.app/)
 [![React](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-14.1-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
+> 🌐 **Live Website:** [Sakthi Dental Clinic | Specialized Dental Care in Hosur, Tamil Nadu](https://sakthi-dental-clinic-dusky.vercel.app/)  
+>  
 > **Specialized Dental Care for Women, Children & Families in Hosur, Tamil Nadu.**  
 > A modern, patient-first web application designed to deliver compassionate, transparent, and expert-led dental healthcare information with a soothing, accessible digital experience.
 
@@ -247,6 +250,8 @@ graph TD
 
 ## 📍 Clinic Contact & Location
 
+- **🌐 Website:**  
+  [Sakthi Dental Clinic | Specialized Dental Care in Hosur, Tamil Nadu](https://sakthi-dental-clinic-dusky.vercel.app/)
 - **🏥 Address:**  
   B2/8, SBM Layout, Anthivadi,  
   Hosur, Tamil Nadu 635109, India
@@ -261,6 +266,9 @@ graph TD
 ---
 
 ## 🌐 Deployment
+
+The production application is live at:  
+👉 **[Sakthi Dental Clinic | Specialized Dental Care in Hosur, Tamil Nadu](https://sakthi-dental-clinic-dusky.vercel.app/)**
 
 ### Vercel Deployment
 
